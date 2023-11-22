@@ -51,7 +51,7 @@ const CreatePost = () => {
           // console.log(data)
           //img upload
           try{
-            const imgUpload=await axios.post("https://mernbackend-wf2s.onrender.com/api/upload",data)
+            const imgUpload=await axios.post("https://back-end-eqfr.onrender.com/api/upload",data)
             // console.log(imgUpload.data)
           }
           catch(err){
@@ -61,7 +61,7 @@ const CreatePost = () => {
         //post upload
         // console.log(post)
         try{
-          const res=await axios.post("https://mernbackend-wf2s.onrender.com/api/posts/create",post,{withCredentials:true})
+          const res=await axios.post("https://back-end-eqfr.onrender.com/api/posts/create",post,{withCredentials:true})
           navigate("/posts/post/"+res.data._id)
           // console.log(res.data)
 
