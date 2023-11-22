@@ -22,7 +22,7 @@ const Home = () => {
   const fetchPosts = async () => {
     setLoader(true)
     try {
-      const res = await axios.get("https://mernbackend-wf2s.onrender.com/api/posts/" + search)
+      const res = await axios.get("https://back-end-eqfr.onrender.com/api/posts/" + search)
       // console.log(res.data)
       setPosts(res.data)
       if (res.data.length === 0) {
