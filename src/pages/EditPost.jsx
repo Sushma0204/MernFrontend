@@ -21,7 +21,7 @@ const EditPost = () => {
 
   const fetchPost = async () => {
     try {
-      const res = await axios.get("https://mernbackend-wf2s.onrender.com/api/posts/" + postId)
+      const res = await axios.get("https://back-end-eqfr.onrender.com/api/posts/" + postId)
       setTitle(res.data.title)
       setDesc(res.data.desc)
       setFile(res.data.photo)
@@ -52,7 +52,7 @@ const EditPost = () => {
       // console.log(data)
       //img upload
       try {
-        const imgUpload = await axios.post("https://mernbackend-wf2s.onrender.com/api/upload", data)
+        const imgUpload = await axios.post("https://back-end-eqfr.onrender.com/api/upload", data)
         // console.log(imgUpload.data)
       }
       catch (err) {
@@ -62,7 +62,7 @@ const EditPost = () => {
     //post upload
 
     try {
-      const res = await axios.put("https://mernbackend-wf2s.onrender.com/api/posts/" + postId, post, { withCredentials: true })
+      const res = await axios.put("https://back-end-eqfr.onrender.com/api/posts/" + postId, post, { withCredentials: true })
       navigate("/posts/post/" + res.data._id)
       // console.log(res.data)
 
