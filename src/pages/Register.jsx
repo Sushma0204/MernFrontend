@@ -16,7 +16,7 @@ const Register = () => {
   const handleRegister = async () => {
 
     try {
-      const res = await axios.post("https://back-end-eqfr.onrender.com/api/auth/register", { username, email, password })
+      const res = await axios.post("https://back-end-api-5fjl.onrender.com/api/auth/register", { username, email, password })
       setUsername(res.data.username)
       setEmail(res.data.email)
       setPassword(res.data.password)
