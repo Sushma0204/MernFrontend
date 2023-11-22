@@ -19,7 +19,7 @@ export function UserContextProvider({children}){
 
     const getUser=async()=>{
       try{
-        const res=await axios.get("https://back-end-api-5fjl.onrender.com/api/auth/refetch",{withCredentials:true})
+        const res=await axios.get("https://backend-api-zfle.onrender.com/api/auth/refetch",{withCredentials:true})
         // console.log(res.data)
         setUser(res.data)
 
