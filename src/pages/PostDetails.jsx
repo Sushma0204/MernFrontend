@@ -23,7 +23,7 @@ const PostDetails = () => {
 
   const fetchPost = async () => {
     try {
-      const res = await axios.get(URL + "/api/posts/" + postId)
+      const res = await axios.get("https://mernbackend-wf2s.onrender.com/api/posts/" + postId)
       // console.log(res.data)
       setPost(res.data)
     }
@@ -35,7 +35,7 @@ const PostDetails = () => {
   const handleDeletePost = async () => {
 
     try {
-      const res = await axios.delete(URL + "/api/posts/" + postId, { withCredentials: true })
+      const res = await axios.delete("https://mernbackend-wf2s.onrender.com/api/posts/" + postId, { withCredentials: true })
       console.log(res.data)
       navigate("/")
 
@@ -54,7 +54,7 @@ const PostDetails = () => {
   const fetchPostComments = async () => {
     setLoader(true)
     try {
-      const res = await axios.get(URL + "/api/comments/post/" + postId)
+      const res = await axios.get("https://mernbackend-wf2s.onrender.com/api/comments/post/" + postId)
       setComments(res.data)
       setLoader(false)
 
@@ -73,7 +73,7 @@ const PostDetails = () => {
   const postComment = async (e) => {
     e.preventDefault()
     try {
-      const res = await axios.post(URL + "/api/comments/create",
+      const res = await axios.post("https://mernbackend-wf2s.onrender.com/api/comments/create",
         { comment: comment, author: user.username, postId: postId, userId: user._id },
         { withCredentials: true })
 
