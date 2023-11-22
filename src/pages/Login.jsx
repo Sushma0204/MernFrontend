@@ -15,7 +15,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post("https://mernbackend-wf2s.onrender.com/api/auth/login", { email, password }, { withCredentials: true })
+      const res = await axios.post("https://back-end-eqfr.onrender.com/api/auth/login", { email, password }, { withCredentials: true })
       // console.log(res.data)
       setUser(res.data)
       navigate("/")
