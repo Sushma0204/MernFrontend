@@ -21,7 +21,7 @@ const Profile = () => {
 
   const fetchProfile = async () => {
     try {
-      const res = await axios.get("https://back-end-api-5fjl.onrender.com/api/users/" + user._id)
+      const res = await axios.get("https://backend-api-zfle.onrender.com/api/users/" + user._id)
       setUsername(res.data.username)
       setEmail(res.data.email)
       setPassword(res.data.password)
@@ -34,7 +34,7 @@ const Profile = () => {
   const handleUserUpdate = async () => {
     setUpdated(false)
     try {
-      const res = await axios.put("https://back-end-api-5fjl.onrender.com/api/users/" + user._id, { username, email, password }, { withCredentials: true })
+      const res = await axios.put("https://backend-api-zfle.onrender.com/api/users/" + user._id, { username, email, password }, { withCredentials: true })
       // console.log(res.data)
       setUpdated(true)
 
@@ -48,7 +48,7 @@ const Profile = () => {
 
   const handleUserDelete = async () => {
     try {
-      const res = await axios.delete("https://back-end-api-5fjl.onrender.com/api/users/" + user._id, { withCredentials: true })
+      const res = await axios.delete("https://backend-api-zfle.onrender.com/api/users/" + user._id, { withCredentials: true })
       setUser(null)
       navigate("/")
       // console.log(res.data)
@@ -61,7 +61,7 @@ const Profile = () => {
   // console.log(user)
   const fetchUserPosts = async () => {
     try {
-      const res = await axios.get("https://back-end-api-5fjl.onrender.com/api/posts/user/" + user._id)
+      const res = await axios.get("https://backend-api-zfle.onrender.com/api/posts/user/" + user._id)
       // console.log(res.data)
       setPosts(res.data)
 
