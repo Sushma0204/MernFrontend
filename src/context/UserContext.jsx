@@ -19,7 +19,7 @@ export function UserContextProvider({children}){
 
     const getUser=async()=>{
       try{
-        const res=await axios.get("https://mernbackend-wf2s.onrender.com/api/auth/refetch",{withCredentials:true})
+        const res=await axios.get("https://back-end-eqfr.onrender.com/api/auth/refetch",{withCredentials:true})
         // console.log(res.data)
         setUser(res.data)
 
